@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="tests" thread-count="3">
+    <test verbose="1" name="Test GetRicePrice">
+        <classes>
+            <class name="testCase.GetRicePriceTest">
+                <methods>
+                    <include name="getRicePriceTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test verbose="2" name="Test GetProductsList">
+        <classes>
+            <class name="testCase.getProductsList">
+                <methods>
+                    <include name="getProductList"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

@@ -7,6 +7,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ProductsListPage extends Browser {
@@ -39,5 +40,13 @@ public class ProductsListPage extends Browser {
         } catch (Exception e) {
             System.out.println("Error while getting product"+e);
         }
+    }
+
+    public List<String> getProductList(){
+        List<String> productList = new ArrayList<>();
+        for(WebElement product: productsListPageObjects.productList)
+        productList.add(product.getText());
+
+        return productList;
     }
 }
